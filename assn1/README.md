@@ -4,7 +4,7 @@
 调度端 --> URL管理器 --> 下载器 --> 解析器 --> 应用  
 
 ### PicsCrawler.py
-爬取[PEXELS](https://www.pexels.com/)高清图片  
+爬取 [PEXELS](https://www.pexels.com/) 高清图片  
 
 * 搜索框中输入关键字：smile，图片通过Ajax请求慢慢加载出来  
 ![img1](PEXELSPics/img1.png)  
