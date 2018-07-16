@@ -17,7 +17,7 @@
 * 使用requests获取url：`requests.get('http://cn.bing.com/HPImageArchive.aspx?format=xml&idx=0&n=1')`
 
 * 使用[BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html)解析上述XML文件
-> 获取文本内容：`.get_text()`
+> 获取文本内容：`.get_text()`  
 标准缩进格式的结构输出： `.prettify()`
 
 * 下载图片并保存到指定目录
