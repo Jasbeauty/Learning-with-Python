@@ -24,10 +24,9 @@
 * 可变参数  
 定义可变参数和定义一个list或tuple参数相比，仅仅在参数前面加了一个`*`号
 `**extra`表示把`extra`这个dict的所有key-value用关键字参数传入到函数的`**kw`参数，`kw`将获得一个dict，注意`kw`获得的dict是`extra`的一份拷贝，对`kw`的改动不会影响到函数外的`extra`  
-> ```  
- >>> extra = {'city': 'Beijing', 'job': 'Engineer'}
- >>> person('Jack', 24, **extra)```   
-
+> `extra = {'city': 'Beijing', 'job': 'Engineer'}`  
+`person('Jack', 24, **extra)` 
+  
 
 ###### 小结
 * Python的函数具有非常灵活的参数形态，既可以实现简单的调用，又可以传入非常复杂的参数
