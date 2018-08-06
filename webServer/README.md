@@ -35,3 +35,14 @@
 | 200 | Internal Server Error | 服务器出现一般性错误 |
 
 * session 数据是由服务器生成并存储在服务器上，session id 以 cookie 的形式发送到客户端上
+* HTTPS 通过一个叫做 TLS 的加密协议来加密消息
+
+#### Task 1
+* Use `BaseHTTPServer` to handle socket connections and parse HTTP requests
+* Respond to GET requests with a static 'page'
+
+![1](pics/task1_1.png)
+
+![2](pics/task1_3.png)
+
+![3](pics/task1_2.png)
