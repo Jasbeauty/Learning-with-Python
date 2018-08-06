@@ -46,3 +46,6 @@
 ![2](pics/task1_3.png)
 
 ![3](pics/task1_2.png)
+
+#### Task 2
+*
