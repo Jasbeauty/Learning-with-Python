@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>留言簿</title>
+</head>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script type="application/javascript">
+    function deleteVal(val) {
+        console.log(val);
+        $.ajax({
+            url:"/delete",
+            method: 'post',
+            data: {
+                index: val
+            },
+            success:function(result){
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        });
+
+    }
+
+</script>
+<body>
+    <h1>留言簿</h1>
+    <p>请尽情留言吧:</p>
+    <form action="/" method="post">
+        姓名: <input type="text" placeholder="请输入姓名" value="{{user_name}}" name="user_name" autofocus="autofocus"> <br><br>
+        内容: <input placeholder="请输入发表内容" value="{{user_content}}" name="user_content"  width="10px" height="50px" type="text"> <br><br><br>
+        <input type="submit" value="提交" name="OK"/>
+    </form>
+    <h3>留言历史信息</h3>
+
+{#    <form action="/delete" method="post">#}
+    {% for user in users %}
+
+         {{ loop.index }}
+            <div>
+          <p>
+             {{ user.username }} -- 留言于({{ user.publish_date }})
+          </p>
+          <p>
+              {{ user.content }}
+          </p>
+
+{#          {{ caller(user.index) }}#}
+{##}
+{#          {% call list_users(user) %}#}
+{#            <input name="delete" type="button" value="Delete">#}
+{#          {% endcall %}#}
+                <form action="/delete" method="post">
+                    <input type="hidden" value="{{ loop.index }}"  name="index">
+                    <input type="submit" value="删除">
+                </form>
+
+        </div>
+
+    {% endfor %}
+
+{#    </form>#}
+
+
+</body>
+</html>
