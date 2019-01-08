@@ -27,13 +27,13 @@ def export():
 
         # 获取每一行的数据
         row = table.row(i)
-        # print(row)
+        print(row)
         value_list = list()
         key = row[0].value
-        # print(key)
+        print(key)
         for i1 in row[1:]:
             value = i1.value
-            # print(value)
+            print(value)
             value_list.append(value)
         data[key] = value_list
     print(data)
